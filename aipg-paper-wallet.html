@@ -6,8 +6,8 @@
 
 	Notice of Copyrights and Licenses:
 	***********************************
-	The bitaddress.org project, software and embedded resources are copyright bitaddress.org (pointbiz). 
-	The bitaddress.org name and logo are not part of the open source license.
+	TheAI Power Grid (AIPG) - Paper Wallet project, software and embedded resources are copyrightAI Power Grid (AIPG) - Paper Wallet (pointbiz). 
+	TheAI Power Grid (AIPG) - Paper Wallet name and logo are not part of the open source license.
 
 	Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights of others. 
 	The individual copyrights are included throughout the document along with their licenses.
@@ -21,11 +21,11 @@
 	window.EllipticCurve		BSD License
 	window.BigInteger		BSD License
 	window.QRCode			MIT License
-	window.Bitcoin			MIT License
+	window.(AIPG			MIT License
 	window.Crypto_scrypt		MIT License
 
-	The bitaddress.org software is available under The MIT License (MIT)
-	Copyright (c) 2011-2016 bitaddress.org (pointbiz)
+	TheAI Power Grid (AIPG) - Paper Wallet software is available under The MIT License (MIT)
+	Copyright (c) 2011-2016AI Power Grid (AIPG) - Paper Wallet (pointbiz)
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
 	associated documentation files (the "Software"), to deal in the Software without restriction, including 
@@ -1432,7 +1432,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 * <body onclick='SecureRandom.seedTime();' onkeypress='SecureRandom.seedTime();'>
 * in your main HTML document.
 * 
-* Copyright Tom Wu, bitaddress.org  BSD License.
+* Copyright Tom Wu,AI Power Grid (AIPG) - Paper Wallet  BSD License.
 * http://www-cs-students.stanford.edu/~tjw/jsbn/LICENSE
 */
 (function () {
@@ -1613,13 +1613,13 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 })();
 	</script>
 	<script type="text/javascript">
-//https://raw.github.com/bitcoinjs/bitcoinjs-lib/faa10f0f6a1fff0b9a99fffb9bc30cee33b17212/src/ecdsa.js
+//https://raw.github.com/(AIPGjs/(AIPGjs-lib/faa10f0f6a1fff0b9a99fffb9bc30cee33b17212/src/ecdsa.js
 /*!
 * Basic Javascript Elliptic Curve implementation
 * Ported loosely from BouncyCastle's Java EC code
 * Only Fp curves implemented for now
 * 
-* Copyright Tom Wu, bitaddress.org  BSD License.
+* Copyright Tom Wu,AI Power Grid (AIPG) - Paper Wallet  BSD License.
 * http://www-cs-students.stanford.edu/~tjw/jsbn/LICENSE
 */
 (function () {
@@ -1681,7 +1681,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	* returns the right value - if none exists it returns null.
 	* 
 	* Copyright (c) 2000 - 2011 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
-	* Ported to JavaScript by bitaddress.org
+	* Ported to JavaScript byAI Power Grid (AIPG) - Paper Wallet
 	*/
 	ec.FieldElementFp.prototype.sqrt = function () {
 		if (!this.q.testBit(0)) throw new Error("even value of q");
@@ -1731,7 +1731,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/*
 	* Copyright (c) 2000 - 2011 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
-	* Ported to JavaScript by bitaddress.org
+	* Ported to JavaScript byAI Power Grid (AIPG) - Paper Wallet
 	*/
 	ec.FieldElementFp.fastLucasSequence = function (p, P, Q, k) {
 		// TODO Research and apply "common-multiplicand multiplication here"
@@ -1960,12 +1960,12 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 		return R;
 	};
 
-	// patched by bitaddress.org and Casascius for use with Bitcoin.ECKey
+	// patched byAI Power Grid (AIPG) - Paper Wallet and Casascius for use with (AIPG.ECKey
 	// patched by coretechs to support compressed public keys
 	ec.PointFp.prototype.getEncoded = function (compressed) {
 		var x = this.getX().toBigInteger();
 		var y = this.getY().toBigInteger();
-		var len = 32; // integerToBytes will zero pad if integer is less than 32 bytes. 32 bytes length is required by the Bitcoin protocol.
+		var len = 32; // integerToBytes will zero pad if integer is less than 32 bytes. 32 bytes length is required by the (AIPG protocol.
 		var enc = ec.integerToBytes(x, len);
 
 		// when compressed prepend byte depending if y point is even or odd 
@@ -2165,7 +2165,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	};
 
 	// for now, work with hex strings because they're easier in JS
-	// compressed support added by bitaddress.org
+	// compressed support added byAI Power Grid (AIPG) - Paper Wallet
 	ec.CurveFp.prototype.decodePointHex = function (s) {
 		var firstByte = parseInt(s.substr(0, 2), 16);
 		switch (firstByte) { // first byte
@@ -2210,7 +2210,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/*
 	* Copyright (c) 2000 - 2011 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
-	* Ported to JavaScript by bitaddress.org
+	* Ported to JavaScript byAI Power Grid (AIPG) - Paper Wallet
 	*
 	* Number yTilde
 	* BigInteger X1
@@ -2258,9 +2258,9 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	ec.X9Parameters.prototype.getN = function () { return this.n; };
 	ec.X9Parameters.prototype.getH = function () { return this.h; };
 
-	// secp256k1 is the Curve used by Bitcoin
+	// secp256k1 is the Curve used by (AIPG
 	ec.secNamedCurves = {
-		// used by Bitcoin
+		// used by (AIPG
 		"secp256k1": function () {
 			// p = 2^256 - 2^32 - 2^9 - 2^8 - 2^7 - 2^6 - 2^4 - 1
 			var p = ec.fromHex("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F");
@@ -2276,7 +2276,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 		}
 	};
 
-	// secp256k1 called by Bitcoin's ECKEY
+	// secp256k1 called by (AIPG's ECKEY
 	ec.getSECCurveByName = function (name) {
 		if (ec.secNamedCurves[name] == undefined) return null;
 		return ec.secNamedCurves[name]();
@@ -3880,7 +3880,7 @@ exports.init();
 
 
 	// Copyright Stephan Thomas (start) --- //
-	// https://raw.github.com/bitcoinjs/bitcoinjs-lib/07f9d55ccb6abd962efb6befdd37671f85ea4ff9/src/util.js
+	// https://raw.github.com/(AIPGjs/(AIPGjs-lib/07f9d55ccb6abd962efb6befdd37671f85ea4ff9/src/util.js
 	// BigInteger monkey patching
 	BigInteger.valueOf = nbv;
 
@@ -6635,7 +6635,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 		</ul>
 		
 		<div id="generate">
-			<span id="generatelabelbitcoinaddress">Generating Bitcoin Address...</span><br />
+			<span id="generatelabelbitcoinaddress">Generating AIPG Address...</span><br />
 			<span id="generatelabelmovemouse">MOVE your mouse around to add some extra randomness... </span><span id="mousemovelimit"></span><br />
 			<span id="generatelabelkeypress">OR type some random characters into this textbox</span> <input type="text" id="generatekeyinput" onkeydown="ninja.seeder.seedKeyPress(event);" /><br />
 			<div id="seedpooldisplay"></div>
@@ -6653,7 +6653,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 					<div id="keyarea" class="keyarea">
 						<div class="public">
 							<div class="pubaddress">
-								<span class="label" id="singlelabelbitcoinaddress">Bitcoin Address</span>
+								<span class="label" id="singlelabelbitcoinaddress">AIPG Address</span>
 							</div>
 							<div id="qrcode_public" class="qrcode_public"></div>
 							<div class="pubaddress">
@@ -6674,11 +6674,11 @@ input[type=checkbox] { position: relative; z-index: 20; }
 					</div>
 
 					<div id="singlesafety">
-						<p id="singletip1"><b>A Bitcoin wallet</b> is as simple as a single pairing of a Bitcoin address with its corresponding Bitcoin private key. Such a wallet has been generated for you in your web browser and is displayed above.</p>
-						<p id="singletip2"><b>To safeguard this wallet</b> you must print or otherwise record the Bitcoin address and private key. It is important to make a backup copy of the private key and store it in a safe location. This site does not have knowledge of your private key. If you are familiar with PGP you can download this all-in-one HTML page and check that you have an authentic version from the author of this site by matching the SHA256 hash of this HTML with the SHA256 hash available in the signed version history document linked on the footer of this site. If you leave/refresh the site or press the "Generate New Address" button then a new private key will be generated and the previously displayed private key will not be retrievable.	Your Bitcoin private key should be kept a secret. Whomever you share the private key with has access to spend all the bitcoins associated with that address. If you print your wallet then store it in a zip lock bag to keep it safe from water. Treat a paper wallet like cash.</p>
-						<p id="singletip3"><b>Add funds</b> to this wallet by instructing others to send bitcoins to your Bitcoin address.</p>
-						<p id="singletip4"><b>Check your balance</b> by going to blockchain.info or blockexplorer.com and entering your Bitcoin address.</p>
-						<p id="singletip5"><b>Spend your bitcoins</b> by going to blockchain.info and sweep the full balance of your private key into your account at their website. You can also spend your funds by downloading one of the popular bitcoin p2p clients and importing your private key to the p2p client wallet. Keep in mind when you import your single key to a bitcoin p2p client and spend funds your key will be bundled with other private keys in the p2p client wallet. When you perform a transaction your change will be sent to another bitcoin address within the p2p client wallet. You must then backup the p2p client wallet and keep it safe as your remaining bitcoins will be stored there. Satoshi advised that one should never delete a wallet.</p>
+						<p id="singletip1"><b>A AIPG wallet</b> is as simple as a single pairing of a AIPG address with its corresponding AIPG private key. Such a wallet has been generated for you in your web browser and is displayed above.</p>
+						<p id="singletip2"><b>To safeguard this wallet</b> you must print or otherwise record the AIPG address and private key. It is important to make a backup copy of the private key and store it in a safe location. This site does not have knowledge of your private key. If you are familiar with PGP you can download this all-in-one HTML page and check that you have an authentic version from the author of this site by matching the SHA256 hash of this HTML with the SHA256 hash available in the signed version history document linked on the footer of this site. If you leave/refresh the site or press the "Generate New Address" button then a new private key will be generated and the previously displayed private key will not be retrievable.	Your AIPG private key should be kept a secret. Whomever you share the private key with has access to spend all the AIPGs associated with that address. If you print your wallet then store it in a zip lock bag to keep it safe from water. Treat a paper wallet like cash.</p>
+						<p id="singletip3"><b>Add funds</b> to this wallet by instructing others to send AIPGs to your AIPG address.</p>
+						<p id="singletip4"><b>Check your balance</b> by going to explorer.aipowergrid.io and entering your AIPG address.</p>
+						<p id="singletip5"><b>Spend your AIPGs</b>Spend your AIPG</b> by importing your private key to the p2p client wallet. Keep in mind when you import your single key to a AIPG p2p client and spend funds your key will be bundled with other private keys in the p2p client wallet. When you perform a transaction your change will be sent to another AIPG address within the p2p client wallet. You must then backup the p2p client wallet and keep it safe as your remaining AIPG will be stored there. Satoshi advised that one should never delete a wallet.</p>
 					</div>
 				</div>
 			</div>
@@ -6721,23 +6721,23 @@ input[type=checkbox] { position: relative; z-index: 20; }
 				<div class="faqs">
 					<div id="bulkfaq1" class="faq"> 
 						<div id="bulkq1" class="question" onclick="ninja.wallets.bulkwallet.openCloseFaq(1);">
-							<span id="bulklabelq1">Why should I use a Bulk Wallet to accept bitcoins on my website?</span>
+							<span id="bulklabelq1">Why should I use a Bulk Wallet to accept AIPG on my website?</span>
 							<div id="bulke1" class="more"></div>
 						</div>
-						<div id="bulka1" class="answer">The traditional approach to accepting bitcoins on your website requires that you install the official bitcoin client daemon ("bitcoind"). Many website hosting packages don't support installing the bitcoin daemon. Also, running the bitcoin daemon on your web server means your private keys are hosted on the server and could get stolen if your web server is hacked. When using a Bulk Wallet you can upload only the bitcoin addresses and not the private keys to your web server. Then you don't have to worry about your bitcoin wallet being stolen if your web server is hacked. </div>
+						<div id="bulka1" class="answer">The traditional approach to accepting AIPGs on your website requires that you install the official AIPG client daemon ("aipgd"). Many website hosting packages don't support installing the AIPG daemon. Also, running the AIPG daemon on your web server means your private keys are hosted on the server and could get stolen if your web server is hacked. When using a Bulk Wallet you can upload only the AIPG addresses and not the private keys to your web server. Then you don't have to worry about your AIPG wallet being stolen if your web server is hacked. </div>
 					</div>
 					<div id="bulkfaq2" class="faq"> 
 						<div id="bulkq2" class="question" onclick="ninja.wallets.bulkwallet.openCloseFaq(2);">
-							<span id="bulklabelq2">How do I use a Bulk Wallet to accept bitcoins on my website?</span>
+							<span id="bulklabelq2">How do I use a Bulk Wallet to accept AIPGs on my website?</span>
 							<div id="bulke2" class="more"></div>
 						</div>
 						<div id="bulka2" class="answer">
 							<ol>
-							<li id="bulklabela2li1">Use the Bulk Wallet tab to pre-generate a large number of bitcoin addresses (10,000+). Copy and paste the generated comma separated values (CSV) list to a secure text file on your computer. Backup the file you just created to a secure location.</li>
-							<li id="bulklabela2li2">Import the bitcoin addresses into a database table on your web server. (Don't put the wallet/private keys on your web server, otherwise you risk hackers stealing your coins. Just the bitcoin addresses as they will be shown to customers.)</li>
-							<li id="bulklabela2li3">Provide an option on your website's shopping cart for your customer to pay in Bitcoin. When the customer chooses to pay in Bitcoin you will then display one of the addresses from your database to the customer as his "payment address" and save it with his shopping cart order.</li>
-							<li id="bulklabela2li4">You now need to be notified when the payment arrives. Google "bitcoin payment notification" and subscribe to at least one bitcoin payment notification service. There are various services that will notify you via Web Services, API, SMS, Email, etc. Once you receive this notification, which could be programmatically automated, you can process the customer's order. To manually check if a payment has arrived you can use Block Explorer. Replace THEADDRESSGOESHERE with the bitcoin address you are checking. It could take between 10 minutes to one hour for the transaction to be confirmed.<br />http://www.blockexplorer.com/address/THEADDRESSGOESHERE<br /><br />Unconfirmed transactions can be viewed at: http://blockchain.info/ <br />You should see the transaction there within 30 seconds.</li>
-							<li id="bulklabela2li5">Bitcoins will safely pile up on the block chain. Use the original wallet file you generated in step 1 to spend them.</li>
+							<li id="bulklabela2li1">Use the Bulk Wallet tab to pre-generate a large number of AIPG addresses (10,000+). Copy and paste the generated comma separated values (CSV) list to a secure text file on your computer. Backup the file you just created to a secure location.</li>
+							<li id="bulklabela2li2">Import the AIPG addresses into a database table on your web server. (Don't put the wallet/private keys on your web server, otherwise you risk hackers stealing your coins. Just the AIPG addresses as they will be shown to customers.)</li>
+							<li id="bulklabela2li3">Provide an option on your website's shopping cart for your customer to pay in AIPG. When the customer chooses to pay in AIPG you will then display one of the addresses from your database to the customer as his "payment address" and save it with his shopping cart order.</li>
+							<li id="bulklabela2li4">You now need to be notified when the payment arrives. Google "AIPG payment notification" and subscribe to at least one AIPG payment notification service. There are various services that will notify you via Web Services, API, SMS, Email, etc. Once you receive this notification, which could be programmatically automated, you can process the customer's order. To manually check if a payment has arrived you can use Block Explorer. Replace THEADDRESSGOESHERE with the AIPG address you are checking. It could take between 10 minutes to one hour for the transaction to be confirmed.<br />http://explorer.aipowergrid.io/address/THEADDRESSGOESHERE<br /><br />Unconfirmed transactions can be viewed at: http://explorer.aipowergrid.io <br />You should see the transaction there within 30 seconds.</li>
+							<li id="bulklabela2li5">AIPGs will safely pile up on the block chain. Use the original wallet file you generated in step 1 to spend them.</li>
 							</ol>
 						</div>
 					</div>
@@ -6768,7 +6768,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 					<div class="public">
 						<div id="brainqrcodepublic" class="qrcode_public"></div>
 						<div class="pubaddress">
-							<span class="label" id="brainlabelbitcoinaddress">Bitcoin Address:</span>
+							<span class="label" id="brainlabelbitcoinaddress">AIPG Address:</span>
 							<span class="output" id="brainbtcaddress"></span>
 						</div>
 					</div>
@@ -6797,7 +6797,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 					<div>
 						<span class="label" id="vanitylabelstep1privatekey">Step 1 Private Key:</span>
 						<span class="output" id="vanityprivatekey"></span>
-						<br /><div class="notes" id="vanitylabelstep1privnotes">Copy and paste the above Private Key field into a text file. Ideally save to an encrypted drive. You will need this to retrieve the Bitcoin Private Key once the Pool has found your prefix.</div>
+						<br /><div class="notes" id="vanitylabelstep1privnotes">Copy and paste the above Private Key field into a text file. Ideally save to an encrypted drive. You will need this to retrieve the AIPG Private Key once the Pool has found your prefix.</div>
 					</div>
 				</div>
 				<div id="vanitystep2label" class="expandable" onclick="ninja.wallets.vanitywallet.openCloseStep(2);">
@@ -6823,7 +6823,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 				</div>
 				<div id="vanitystep2area">
 					<div>
-						<span class="label" id="vanitylabelbitcoinaddress">Vanity Bitcoin Address:</span>
+						<span class="label" id="vanitylabelbitcoinaddress">Vanity AIPG Address:</span>
 						<span class="output" id="vanityaddress"></span>
 						<br /><div class="notes" id="vanitylabelnotesbitcoinaddress">The above is your new address that should include your required prefix.</div>
 					</div>
@@ -6890,18 +6890,18 @@ input[type=checkbox] { position: relative; z-index: 20; }
 				</div>
 				<div id="detailkeyarea">
 					<div class="notes">
-						<span id="detaillabelnote1">Your Bitcoin Private Key is a unique secret number that only you know. It can be encoded in a number of different formats. Below we show the Bitcoin Address and Public Key that corresponds to your Private Key as well as your Private Key in the most popular encoding formats (WIF, WIFC, HEX, B64).</span>
+						<span id="detaillabelnote1">Your AIPG Private Key is a unique secret number that only you know. It can be encoded in a number of different formats. Below we show the Bitcoin Address and Public Key that corresponds to your Private Key as well as your Private Key in the most popular encoding formats (WIF, WIFC, HEX, B64).</span>
 						<br /><br />
-						<span id="detaillabelnote2">Bitcoin v0.6+ stores public keys in compressed format. The client now also supports import and export of private keys with importprivkey/dumpprivkey. The format of the exported private key is determined by whether the address was generated in an old or new wallet.</span>
+						<span id="detaillabelnote2">AIPG stores public keys in compressed format. The client now also supports import and export of private keys with importprivkey/dumpprivkey. The format of the exported private key is determined by whether the address was generated in an old or new wallet.</span>
 					</div>
 					<div class="pubqr">
 						<div class="item">
-							<span class="label" id="detaillabelbitcoinaddress">Bitcoin Address</span>
+							<span class="label" id="detaillabelbitcoinaddress">AIPG Address</span>
 							<div id="detailqrcodepublic" class="qrcode_public"></div>
 							<span class="output" id="detailaddress"></span>
 						</div>					
 						<div class="item right">
-							<span class="label" id="detaillabelbitcoinaddresscomp">Bitcoin Address Compressed</span>
+							<span class="label" id="detaillabelbitcoinaddresscomp">AIPG Address Compressed</span>
 							<div id="detailqrcodepubliccomp" class="qrcode_public"></div>
 							<span class="output" id="detailaddresscomp"></span>
 						</div>
@@ -6957,7 +6957,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 							<span id="detaillabelq1">How do I make a wallet using dice? What is B6?</span>
 							<div id="detaile1" class="more"></div>
 						</div>
-						<div id="detaila1" class="answer">An important part of creating a Bitcoin wallet is ensuring the random numbers used to create the wallet are truly random. Physical randomness is better than computer generated pseudo-randomness. The easiest way to generate physical randomness is with dice. To create a Bitcoin private key you only need one six sided die which you roll 99 times. Stopping each time to record the value of the die. When recording the values follow these rules: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. By doing this you are recording the big random number, your private key, in B6 or base 6 format. You can then enter the 99 character base 6 private key into the text field above and click View Details. You will then see the Bitcoin address associated with your private key. You should also make note of your private key in WIF format since it is more widely used.</div>
+						<div id="detaila1" class="answer">An important part of creating an AIPG wallet is ensuring the random numbers used to create the wallet are truly random. Physical randomness is better than computer generated pseudo-randomness. The easiest way to generate physical randomness is with dice. To create an AIPG private key you only need one six sided die which you roll 99 times. Stopping each time to record the value of the die. When recording the values follow these rules: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. By doing this you are recording the big random number, your private key, in B6 or base 6 format. You can then enter the 99 character base 6 private key into the text field above and click View Details. You will then see the AIPG address associated with your private key. You should also make note of your private key in WIF format since it is more widely used.</div>
 					</div>
 				</div>
 			</div>
@@ -6995,12 +6995,12 @@ input[type=checkbox] { position: relative; z-index: 20; }
 				<div class="tooltip" id="statusprotocolbad">
 					<span class="statuswarn" id="statuslabelprotocolbad">&#9888; Think twice!</span>
 					<span id="statuslabelprotocolbad1">You appear to be running this generator online from a live website. For valuable wallets it is recommended to</span>
-					<a id="statuslabelprotocolbad2" href="https://github.com/pointbiz/bitaddress.org/archive/v3.3.0.zip">download</a>
+					<a id="statuslabelprotocolbad2" href="https://github.com/AIPowerGrid/AI-Power-Grid-Paper-Wallet/releases/download/v1.1/AIPG-PW-1.1.zip">download</a>
 					<span id="statuslabelprotocolbad3">the zip file from GitHub and run this generator offline as a local html file.</span>
 					<br /><br /><input type="button" value="OK" class="button" id="statusokprotocolbad" onclick="document.getElementById('statusprotocolbad').style.display = 'none';" />
 				</div>
 				<div class="tooltip" id="statuskeypoolgood">
-					<span id="statuslabelkeypool1">This is a log of all the Bitcoin Addresses and Private Keys you generated during your current session. Reloading the page will create a new session.</span>
+					<span id="statuslabelkeypool1">This is a log of all the AIPG Addresses and Private Keys you generated during your current session. Reloading the page will create a new session.</span>
 					<textarea rows="20" cols="102" id="keypooltextarea"></textarea>
 					
 					<br /><br />
@@ -7017,7 +7017,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 						<span class="statusicon" id="statusunittests" onclick="ninja.status.showUnitTests();">...</span>
 						<span class="statusicon" id="statuskeypool" onclick="ninja.status.showKeyPool();">&#8803;</span>
 					</span>
-					<span class="item"><span id="footerlabeldonations">Donations:</span> <b>1NiNja</b>1bUmhSoTXozBRBEtR8LeF9TGbZBN</span>
+					<span class="item"><span id="footerlabeldonations">Donations for original project:</span> <b>1NiNja</b>1bUmhSoTXozBRBEtR8LeF9TGbZBN</span>
 					<span class="item" id="footerlabeltranslatedby"></span>
 					<span class="item"><a href="https://github.com/pointbiz/bitaddress.org" target="_blank" id="footerlabelgithub">GitHub Repository</a> 
 						(<a href="https://github.com/pointbiz/bitaddress.org/archive/v3.3.0.zip" target="_blank" id="footerlabelgithubzip">zip</a>)</span>
@@ -7035,7 +7035,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 				</span>
 			</div>
 			<div class="copyright">
-				<span id="footerlabelcopyright1">Copyright bitaddress.org.</span>
+				<span id="footerlabelcopyright1">Copyright bitaddress.org, AI Power Grid (AIPG).</span>
 				<span id="footerlabelcopyright2">JavaScript copyrights are included in the source.</span>
 				<span id="footerlabelnowarranty">No warranty.</span>
 			</div>
@@ -7785,12 +7785,12 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 			"en": {
 				// javascript alerts or messages
 				"testneteditionactivated": "TESTNET EDITION ACTIVATED",
-				"paperlabelbitcoinaddress": "Bitcoin Address:",
+				"paperlabelbitcoinaddress": "AIPG Address:",
 				"paperlabelprivatekey": "Private Key:",
 				"paperlabelencryptedkey": "Encrypted Private Key (Password required)",
 				"bulkgeneratingaddresses": "Generating addresses... ",
 				"brainalertpassphrasetooshort": "The passphrase you entered is too short.\n\n",
-				"brainalertpassphrasewarning": "Warning: Choosing a strong passphrase is important to avoid brute force attempts to guess your passphrase and steal your bitcoins.",
+				"brainalertpassphrasewarning": "Warning: Choosing a strong passphrase is important to avoid brute force attempts to guess your passphrase and steal your AIPG.",
 				"brainalertpassphrasedoesnotmatch": "The passphrase does not match the confirm passphrase.",
 				"detailalertnotvalidprivatekey": "The text you entered is not a valid Private Key",
 				"detailconfirmsha256": "The text you entered is not a valid Private Key!\n\nWould you like to use the entered text as a passphrase and create a Private Key using a SHA256 hash of the passphrase?\n\nWarning: Choosing a strong passphrase is important to avoid brute force attempts to guess your passphrase and steal your bitcoins.",
@@ -7800,7 +7800,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 				"bip38alertpassphraserequired": "Passphrase required for BIP38 key",
 				"vanityinvalidinputcouldnotcombinekeys": "Invalid input. Could not combine keys.",
 				"vanityalertinvalidinputpublickeysmatch": "Invalid input. The Public Key of both entries match. You must input two different keys.",
-				"vanityalertinvalidinputcannotmultiple": "Invalid input. Cannot multiply two public keys. Select 'Add' to add two public keys to get a bitcoin address.",
+				"vanityalertinvalidinputcannotmultiple": "Invalid input. Cannot multiply two public keys. Select 'Add' to add two public keys to get an AIPG address.",
 				"vanityprivatekeyonlyavailable": "Only available when combining two private keys",
 				"vanityalertinvalidinputprivatekeysmatch": "Invalid input. The Private Key of both entries match. You must input two different keys.",
 
@@ -7886,26 +7886,26 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 	translator.translations["cs"] = {
 		// javascript alerts or messages
 		"testneteditionactivated": "TESTNET aktivován",
-		"paperlabelbitcoinaddress": "Bitcoin adresa:",
+		"paperlabelbitcoinaddress": "AIPG adresa:",
 		"paperlabelprivatekey": "Soukromý klíč:",
 		"paperlabelencryptedkey": "Šifrovaný soukromý klíč (Vyžadováno heslo)",
 		"bulkgeneratingaddresses": "Generuji adresy... ",
 		"brainalertpassphrasetooshort": "Zadané heslo je příliš krátké.\n\n",
-		"brainalertpassphrasewarning": "Varování: Je důležité zvolit silné heslo, které je odolné proti útoku hrubou silou a krádeži vašich Bitcoinů.",
+		"brainalertpassphrasewarning": "Varování: Je důležité zvolit silné heslo, které je odolné proti útoku hrubou silou a krádeži vašich AIPGů.",
 		"brainalertpassphrasedoesnotmatch": "Heslo nejsou stejná.",
 		"detailalertnotvalidprivatekey": "Zadaný text není platým soukromým klíčem",
-		"detailconfirmsha256": "Zadaný text není platným soukromým klíčem!\n\nChcete použít zadaný text jako heslo a vytvořit soukromý klíč pomocí SHA256?\n\nVarování: Je důležité zvolit silné heslo, které je odolné proti útoku hrubou silou a krádeži vašich Bitcoinů.",
+		"detailconfirmsha256": "Zadaný text není platným soukromým klíčem!\n\nChcete použít zadaný text jako heslo a vytvořit soukromý klíč pomocí SHA256?\n\nVarování: Je důležité zvolit silné heslo, které je odolné proti útoku hrubou silou a krádeži vašich AIPGů.",
 		"bip38alertincorrectpassphrase": "Špatné heslo pro BIP38",
 		"bip38alertpassphraserequired": "Vyžadováno heslo pro BIP38 klíč",
 		"vanityinvalidinputcouldnotcombinekeys": "Špatný vstup. Kombinovat klíče není možné.",
 		"vanityalertinvalidinputpublickeysmatch": "Špatný vstup. Veřejný klíč obou položek je shodný. Musíte zadat dva různé klíče.",
-		"vanityalertinvalidinputcannotmultiple": "Špatný vstup. Dva veřejné klíče není možné násobit. Zvolte 'Přidat' pro přidání dvou veřejných klíčů a získání Bitcoin adresy.",
+		"vanityalertinvalidinputcannotmultiple": "Špatný vstup. Dva veřejné klíče není možné násobit. Zvolte 'Přidat' pro přidání dvou veřejných klíčů a získání AIPG adresy.",
 		"vanityprivatekeyonlyavailable": "Dostupné pouze při kombinaci dvou soukromých klíčů",
 		"vanityalertinvalidinputprivatekeysmatch": "Špatný vstup. Soukromý klíč obou položek je shodný. Musíte zadat dva různé klíče.",
 
 		// header and menu html
 		"tagline": "Open Source generátor Bitcoin peněženky napsaný v JavaScript",
-		"generatelabelbitcoinaddress": "Generuji Bitcoin adresu",
+		"generatelabelbitcoinaddress": "Generuji AIPG adresu",
 		"generatelabelmovemouse": "POHYBUJTE myší pro získání dostatku náhody...",
 		"generatelabelkeypress": "NEBO napište několik náhodných znaků do tohoto pole",
 		"singlewallet": "Jedna peněženka",
@@ -7924,7 +7924,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelgithub": "GitHub Repository",
 		"footerlabelgithubzip": "zip",
 		"footerlabelsig": "sig",
-		"footerlabelcopyright1": "Copyright bitaddress.org.",
+		"footerlabelcopyright1": "Copyright bitaddress.org, AI Power Grid (AIPG).",
 		"footerlabelcopyright2": "Copyright JavaScriptu je uveden ve zdrojovém kódu.",
 		"footerlabelnowarranty": "Bez záruky.",
 
@@ -7949,20 +7949,20 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"statuslabelprotocolbad2": "download", //TODO: please translate
 		"statuslabelprotocolbad3": "the zip file from GitHub and run this generator offline as a local html file.", //TODO: please translate
 		"statusokprotocolbad": "OK", //TODO: please translate
-		"statuslabelkeypool1": "This is a log of all the Bitcoin Addresses and Private Keys you generated during your current session. Reloading the page will create a new session.", //TODO: please translate
+		"statuslabelkeypool1": "This is a log of all the AIPG Addresses and Private Keys you generated during your current session. Reloading the page will create a new session.", //TODO: please translate
 		"statuskeypoolrefresh": "Refresh", //TODO: please translate
 		"statusokkeypool": "OK", //TODO: please translate
 
 		// single wallet html
 		"newaddress": "Vytvořit novou adresu",
 		"singleprint": "Tisk",
-		"singlelabelbitcoinaddress": "Bitcoin adresa",
+		"singlelabelbitcoinaddress": "AIPG adresa",
 		"singlelabelprivatekey": "Soukromý klíč (WIF &ndash; Formát pro import do peněženky):",
-		"singletip1": "<b>Bitcoin peněženka</b> je jednoduchý pár Bitcoin adresy s přidruženým soukromým klíčem. Taková peněženka byla právě vytvořena ve vašem prohlížeči a zobrazena výše.",
-		"singletip2": "<b>Pro zabezpečení této peněženky</b> musíte tuto Bitcoin adresu a soukromý klíč vytisknout a nebo jinak poznamenat. Je důležité provést zálohu soukromého klíče a jeho uschování na bezpečném místě. Tato webová stránka nemá žádné informace o vašem soukromém klíči. Pokud ovládáte PGP, můžete celou tuto stránku stáhnout v jednom HTML souboru a ověřit její pravost srovnáním SHA256 hashe s podepsaným dokumentem historie verzí. Odkaz naleznete v patičce této stránky. Pokud opustíte či obnovíte tuto stránku nebo kliknete na 'Vytvořit novou adresu' dojde k vygenerování nového soukromého klíče a předtím zobrazený klíč bude ztracen. Váš soukromý klíč musíte uchovat v tajnosti. Každý kdo má tento klíč k dispozici může utratit všechny peníze v této peněžence. Pokud budete peněženku tisknout, uzavřete ji do nepropustného obalu nebo ji zalaminujte. Tím zabráníte jejímu poškození vodou. Chovejte se k této peněžence jako k normálním bankovkám.",
-		"singletip3": "<b>Pro vložení</b> peněz do této peněženky stačí zaslat peníze na Bitcoin adresu.",
-		"singletip4": "<b>Zkontrolovat zůstatek</b> můžete na webové stránce blockchain.info nebo blockexplorer.com po zadání Bitcoin adresy.",
-		"singletip5": "<b>Utratit Bitcoiny</b> můžete pomocí blockchain.info načtením celého zůstatku pomocí soukromého klíče do vašeho účtu. Utratit zůstatek můžete také pomocí jednoho z P2P Bitcoin klientů naimportováním soukromého klíče. Myslete na to, že importem klíče do klienta se stane součástí jeho peněženky. Pokud převedete někomu peníze, nespotřebovaný zůstatek se zašle na jinou Bitcoin adresu uvedenou v P2P klienta. Tuto novou adresu musíte vyzálohovat a udržovat v bezpečí. Satoshi doporučuje, že by nikdo nikdy neměl mazat peněženku.",
+		"singletip1": "<b>AIPG peněženka</b> je jednoduchý pár AIPG adresy s přidruženým soukromým klíčem. Taková peněženka byla právě vytvořena ve vašem prohlížeči a zobrazena výše.",
+		"singletip2": "<b>Pro zabezpečení této peněženky</b> musíte tuto AIPG adresu a soukromý klíč vytisknout a nebo jinak poznamenat. Je důležité provést zálohu soukromého klíče a jeho uschování na bezpečném místě. Tato webová stránka nemá žádné informace o vašem soukromém klíči. Pokud ovládáte PGP, můžete celou tuto stránku stáhnout v jednom HTML souboru a ověřit její pravost srovnáním SHA256 hashe s podepsaným dokumentem historie verzí. Odkaz naleznete v patičce této stránky. Pokud opustíte či obnovíte tuto stránku nebo kliknete na 'Vytvořit novou adresu' dojde k vygenerování nového soukromého klíče a předtím zobrazený klíč bude ztracen. Váš soukromý klíč musíte uchovat v tajnosti. Každý kdo má tento klíč k dispozici může utratit všechny peníze v této peněžence. Pokud budete peněženku tisknout, uzavřete ji do nepropustného obalu nebo ji zalaminujte. Tím zabráníte jejímu poškození vodou. Chovejte se k této peněžence jako k normálním bankovkám.",
+		"singletip3": "<b>Pro vložení</b> peněz do této peněženky stačí zaslat peníze na AIPG adresu.",
+		"singletip4": "<b>Zkontrolovat zůstatek</b> můžete na webové stránce blockchain.info nebo blockexplorer.com po zadání AIPG adresy.",
+		"singletip5": "<b>Utratit AIPG</b> můžete pomocí explorer.aipowergrid.io načtením celého zůstatku pomocí soukromého klíče do vašeho účtu. Utratit zůstatek můžete také pomocí jednoho z P2P AIPG klientů naimportováním soukromého klíče. Myslete na to, že importem klíče do klienta se stane součástí jeho peněženky. Pokud převedete někomu peníze, nespotřebovaný zůstatek se zašle na jinou AIPG adresu uvedenou v P2P klienta. Tuto novou adresu musíte vyzálohovat a udržovat v bezpečí. Satoshi doporučuje, že by nikdo nikdy neměl mazat peněženku.",
 		"singleshare": "SDÍLEJTE",
 		"singlesecret": "SOUKROMÉ",
 
@@ -7983,14 +7983,14 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"bulkprint": "Tisk",
 		"bulklabelcsv": "Čárkou oddělené hodnoty (CSV):",
 		"bulklabelformat": "Index, Adresa, Soukromý klíč (WIF &ndash; Formát pro import do peněženky)",
-		"bulklabelq1": "Proč bych měl používat Hromadnou peněženku pro příjem Bitcoinů na mé stránce?",
-		"bulka1": "Tradiční způsob jak přijímat Bitcoiny na vaší webové stránce vyžaduje instalaci oficiálního bitcoin klienta (\"bitcoind\"). Mnoho webhostingových společností neumožňuje tuto instalaci provést. Také běh bitcoin démona na webovém serveru znamená, že soukromé klíče jsou uloženy na serveru a mohou být ukradeny. Pokud použijete Hromadnou peněženku, tak stačí na server nahrát pouze veřejnou bitcoin adresu a ne soukromé klíče. Poté se nemusíte bát, že vaše Bitcoiny budou ukradeny v případě napadení serveru.",
-		"bulklabelq2": "Jakým způsobem mohou přijímat Bitcoiny na mé stránce pomocí Hromadné peněženky?",
-		"bulklabela2li1": "Předgenerujte si velké množství Bitcoin adres (10 000+). Okopírujte si CSV seznam do souboru na bezpečné místo ve vašem počítači. Poté jej vyzálohujte na bezpečné místo.",
-		"bulklabela2li2": "Naimportujte Bitcoin adresy do databáze na vašem webovém serveru. Neimportujte soukromé klíče, abyste zabránili krádeži vašich peněz.",
-		"bulklabela2li3": "Umožněte na vaší stránce platbu pomocí Bitcoinu. Stačí vždy zobrazit jednu z vygenerovaných adres a uložit si ji u objednávky.",
-		"bulklabela2li4": "Nyní je již pouze potřeba zařídit notifikace o příchozí transakci. Zadejte do Google \"bitcoin payment notification\" a využijte jednu z existujících služeb. Existuje jich několik a podporují např. Web Services, API, SMS, Email, apod. Notifikaci můžete zpracovat automaticky. Pro ruční kontrolu, zda peníze přišly, stačí použít Block Explorer. Nahraďte SEMPATŘÍADRESA Bitcoin adresou, kterou chcete zkontrolovat. Potvrzení transkace může trvat od 10 minut do jedné hodiny.<br />http://www.blockexplorer.com/address/SEMPATŘÍADRESA<br /><br />Nepotvrzené tansakce je možné zkontrolovat na: http://blockchain.info/ <br />Většinou se zde zobrazí do 30 sekund.",
-		"bulklabela2li5": "Bitcoiny budou bezpečně převedeny v řetězci bloků. Pro spotřebování stačí kdykoliv naimportovat soubor vygenerovaný v prvním kroku.",
+		"bulklabelq1": "Proč bych měl používat Hromadnou peněženku pro příjem AIPGů na mé stránce?",
+		"bulka1": "Tradiční způsob jak přijímat AIPGy na vaší webové stránce vyžaduje instalaci oficiálního AIPG klienta (\"aipgd\"). Mnoho webhostingových společností neumožňuje tuto instalaci provést. Také běh AIPG démona na webovém serveru znamená, že soukromé klíče jsou uloženy na serveru a mohou být ukradeny. Pokud použijete Hromadnou peněženku, tak stačí na server nahrát pouze veřejnou AIPG adresu a ne soukromé klíče. Poté se nemusíte bát, že vaše AIPGy budou ukradeny v případě napadení serveru.",
+		"bulklabelq2": "Jakým způsobem mohou přijímat AIPGy na mé stránce pomocí Hromadné peněženky?",
+		"bulklabela2li1": "Předgenerujte si velké množství AIPG adres (10 000+). Okopírujte si CSV seznam do souboru na bezpečné místo ve vašem počítači. Poté jej vyzálohujte na bezpečné místo.",
+		"bulklabela2li2": "Naimportujte AIPG adresy do databáze na vašem webovém serveru. Neimportujte soukromé klíče, abyste zabránili krádeži vašich peněz.",
+		"bulklabela2li3": "Umožněte na vaší stránce platbu pomocí APGu. Stačí vždy zobrazit jednu z vygenerovaných adres a uložit si ji u objednávky.",
+		"bulklabela2li4": "Nyní je již pouze potřeba zařídit notifikace o příchozí transakci. Zadejte do Google \"AIPG payment notification\" a využijte jednu z existujících služeb. Existuje jich několik a podporují např. Web Services, API, SMS, Email, apod. Notifikaci můžete zpracovat automaticky. Pro ruční kontrolu, zda peníze přišly, stačí použít Block Explorer. Nahraďte SEMPATŘÍADRESA AIPG adresou, kterou chcete zkontrolovat. Potvrzení transkace může trvat od 10 minut do jedné hodiny.<br />http://www.blockexplorer.com/address/SEMPATŘÍADRESA<br /><br />Nepotvrzené tansakce je možné zkontrolovat na: http://blockchain.info/ <br />Většinou se zde zobrazí do 30 sekund.",
+		"bulklabela2li5": "AIPGy budou bezpečně převedeny v řetězci bloků. Pro spotřebování stačí kdykoliv naimportovat soubor vygenerovaný v prvním kroku.",
 
 		// brain wallet html
 		"brainlabelenterpassphrase": "Zadejte heslo:",
@@ -7999,7 +7999,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"brainlabelconfirm": "Heslo znovu:",
 		"brainview": "Zobrazit",
 		"brainalgorithm": "Algoritmus: SHA256 (Heslo)",
-		"brainlabelbitcoinaddress": "Bitcoin adresa:",
+		"brainlabelbitcoinaddress": "AIPG adresa:",
 		"brainlabelprivatekey": "Soukromý klíč (WIF &ndash; Formát pro import do peněženky):",
 
 		// vanity wallet html
@@ -8017,7 +8017,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"vanitylabelradioadd": "Sečíst",
 		"vanitylabelradiomultiply": "Násobit",
 		"vanitycalc": "Spočítát peněženku Vanity",
-		"vanitylabelbitcoinaddress": "Bitcoin adresa Vanity:",
+		"vanitylabelbitcoinaddress": "AIPG adresa Vanity:",
 		"vanitylabelnotesbitcoinaddress": "Výše je vaše nová adresa, která by měla obsahovat požadovaný začátek.",
 		"vanitylabelpublickeyhex": "Veřejný klíč Vanity (HEX):",
 		"vanitylabelnotespublickeyhex": "Výše je veřejný klíč v hexadecimálním formátu.",
@@ -8031,8 +8031,8 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"detailprint": "Tisk",
 		"detaillabelnote1": "",
 		"detaillabelnote2": "",
-		"detaillabelbitcoinaddress": "Bitcoin adresa:",
-		"detaillabelbitcoinaddresscomp": "Komprimovaná bitcoin adresa:",
+		"detaillabelbitcoinaddress": "AIPG adresa:",
+		"detaillabelbitcoinaddresscomp": "Komprimovaná AIPG adresa:",
 		"detaillabelpublickey": "Veřejný klíč (130 znaků [0-9A-F]):",
 		"detaillabelpublickeycomp": "Komprimovaný veřejný klíč (66 znaků [0-9A-F]):",
 		"detaillabelprivwif": "Soukromý klíč WIF  <br />51 znaků v base58, začíná",
@@ -8090,7 +8090,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelgithub": "GitHub-Repository",
 		"footerlabelgithubzip": "zip",
 		"footerlabelsig": "sig",
-		"footerlabelcopyright1": "Copyright bitaddress.org.",
+		"footerlabelcopyright1": "CopyrightAI Power Grid (AIPG) - Paper Wallet.",
 		"footerlabelcopyright2": "JavaScript-Copyrights sind im Quelltext enthalten.",
 		"footerlabelnowarranty": "Ohne Gew&auml;hr.",
 
@@ -8256,7 +8256,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelgithub": "Αποθετήριο GitHub",
 		"footerlabelgithubzip": "zip",
 		"footerlabelsig": "sig",
-		"footerlabelcopyright1": "Copyright bitaddress.org.",
+		"footerlabelcopyright1": "CopyrightAI Power Grid (AIPG) - Paper Wallet.",
 		"footerlabelcopyright2": "Τα πνευματικά δικαιώματα της JavaScript περιλαμβάνονται στον κώδικα.",
 		"footerlabelnowarranty": "Καμία εγγύηση.",
 
@@ -8422,7 +8422,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelgithub": "Repositorio GitHub",
 		"footerlabelgithubzip": "zip",
 		"footerlabelsig": "sig",
-		"footerlabelcopyright1": "Copyright bitaddress.org.",
+		"footerlabelcopyright1": "CopyrightAI Power Grid (AIPG) - Paper Wallet.",
 		"footerlabelcopyright2": "Copyright del código JavaScript: en el fuente.",
 		"footerlabelnowarranty": "Sin garantía.",
 
@@ -8588,7 +8588,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelgithub": "Dépôt GitHub",
 		"footerlabelgithubzip": "zip",
 		"footerlabelsig": "sig",
-		"footerlabelcopyright1": "Copyright bitaddress.org.",
+		"footerlabelcopyright1": "CopyrightAI Power Grid (AIPG) - Paper Wallet.",
 		"footerlabelcopyright2": "Les droits d'auteurs JavaScript sont inclus dans le code source.",
 		"footerlabelnowarranty": "Aucune garantie.",
 
@@ -8755,7 +8755,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelgithub": "GitHub kódtár",
 		"footerlabelgithubzip": "zip",
 		"footerlabelsig": "sig",
-		"footerlabelcopyright1": "Copyright bitaddress.org.",
+		"footerlabelcopyright1": "CopyrightAI Power Grid (AIPG) - Paper Wallet.",
 		"footerlabelcopyright2": "Az egyes JavaScript kódok szerzőinek jogai a forráskódon belül találhatók meg.",
 		"footerlabelnowarranty": "Garancia nincs.",
 
@@ -8928,7 +8928,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelgithub": "Repository GitHub",
 		"footerlabelgithubzip": "zip",
 		"footerlabelsig": "sig",
-		"footerlabelcopyright1": "Copyright bitaddress.org.",
+		"footerlabelcopyright1": "CopyrightAI Power Grid (AIPG) - Paper Wallet.",
 		"footerlabelcopyright2": "Le note di copyright dei file JavaScript sono inclusi nei sorgenti stessi.",
 		"footerlabelnowarranty": "Nessuna garanzia.",
 
@@ -9094,7 +9094,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelgithub": "GitHubリポジトリ",
 		"footerlabelgithubzip": "zip",
 		"footerlabelsig": "sig",
-		"footerlabelcopyright1": "Copyright bitaddress.org.",
+		"footerlabelcopyright1": "CopyrightAI Power Grid (AIPG) - Paper Wallet.",
 		"footerlabelcopyright2": "JavaScriptのコピーライト情報はソースに含まれています。",
 		"footerlabelnowarranty": "保障はありません。",
 
@@ -9267,7 +9267,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelgithub": "Repositório GitHub",
 		"footerlabelgithubzip": "zip",
 		"footerlabelsig": "sig",
-		"footerlabelcopyright1": "Copyright bitaddress.org.",
+		"footerlabelcopyright1": "CopyrightAI Power Grid (AIPG) - Paper Wallet.",
 		"footerlabelcopyright2": "Copyright do código JavaScript: no código-fonte.",
 		"footerlabelnowarranty": "Sem garantia.",
 
@@ -9433,7 +9433,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelgithub": "Проект на GitHub",
 		"footerlabelgithubzip": "zip",
 		"footerlabelsig": "sig",
-		"footerlabelcopyright1": "Копирайт bitaddress.org.",
+		"footerlabelcopyright1": "КопирайтAI Power Grid (AIPG) - Paper Wallet.",
 		"footerlabelcopyright2": "Информация о копирайте на JavaScript в исходниках.",
 		"footerlabelnowarranty": "Без гарантий.",
 
@@ -9598,7 +9598,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelgithub": "GitHub页面",
 		"footerlabelgithubzip": "zip",
 		"footerlabelsig": "sig",
-		"footerlabelcopyright1": "Copyright bitaddress.org.",
+		"footerlabelcopyright1": "CopyrightAI Power Grid (AIPG) - Paper Wallet.",
 		"footerlabelcopyright2": "JavaScript的版权信息已经包含在源代码中。",
 		"footerlabelnowarranty": "No warranty",
 
