@@ -14,6 +14,17 @@ loaded.
 Please send DONATIONS for this project to Bitcoin Address (original developer): 
 1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN
 
+**Procedure for Importing a Paper Wallet into the QT Wallet:**
+
+1) Perform a clean installation on a system without any previous wallet (ensure the absence of the .aipg directory). Prior to deletion, safeguard your seed words.
+
+2) Run ./aipgd in one terminal window.
+
+3) In another terminal window, execute ./aipg-cli importprivkey "MY-PRIVATE-KEY-GENERATED-ON-PAPER-WALLET".
+
+4) Close the ./aipgd window (CTRL-C).
+
+5) Open the QT wallet, set a passphrase, allow it to synchronize for a few minutes, and start enjoying your wallet.
 
 END USER NOTES:
 
