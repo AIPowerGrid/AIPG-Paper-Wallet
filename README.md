@@ -1,4 +1,4 @@
-# aipowergrid.io
+# AI Power Grid Paper Wallet Generator
 JavaScript Client-Side AIPG Wallet Generator
 
 Now AIPG addresses and their corresponding private key can be conveniently 
