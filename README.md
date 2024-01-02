@@ -1,6 +1,6 @@
 # 🔐 AIPG Paper Wallet
 
-A paper wallet is a physical document containing your private and public keys, typically printed in the form of QR codes. It is considered one of the most secure ways to hold AIPG because it keeps your keys completely offline and safe from online hacking attempts. 
+A paper wallet is a physical document containing your private and public keys. It is considered one of the most secure ways to hold AIPG because it keeps your keys completely offline and safe from online hacking attempts. 
 
 Follow these steps to create your AIPG paper wallet:
 
