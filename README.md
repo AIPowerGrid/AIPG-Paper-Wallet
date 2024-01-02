@@ -1,4 +1,4 @@
-🔐 AIPG Paper Wallet Instructions 🔐
+# 🔐 AIPG Paper Wallet Instructions 🔐
 
 A paper wallet is a physical document containing your private and public keys, typically printed in the form of QR codes. It is considered one of the most secure ways to hold AIPG because it keeps your keys completely offline and safe from online hacking attempts. 
 
@@ -29,7 +29,7 @@ The "load and verify" wallet address refers to the public address of your AIPG w
 
 The private key, on the other hand, is like a password. It is a secret key that is used to access and send your coins from the wallet address. Anyone with access to your private key can control the AIPG funds associated with your public address. Therefore, it should be kept secure and never shared with anyone.
 
-**Adding a Watch Wallet to aipg-qt:**
+# Adding a Watch Wallet to aipg-qt:
 To add a wallet address as a watch-only wallet in the aipg-qt wallet software, you essentially add it to your wallet interface to keep an eye on its balance and transactions without having the ability to spend any of the coins (since you don't have the private key).
 
 Here's how you can add a watch wallet to aipg-qt:
