@@ -32,40 +32,16 @@ The private key, on the other hand, is like a password. It is a secret key that 
 # Adding a Watch Wallet to aipg-qt:
 To add a wallet address as a watch-only wallet in the aipg-qt wallet software, you essentially add it to your wallet interface to keep an eye on its balance and transactions without having the ability to spend any of the coins (since you don't have the private key).
 
-Here's how you can add a watch wallet to aipg-qt:
-
-Open your aipg-qt wallet software.
-Navigate to the 'File' menu and select 'Open URI' or similar option.
-Enter the public wallet address that you wish to watch.
-Confirm the addition, and the software will add the address onto your wallet interface.
+1. Open your aipg-qt wallet software.
+2. Navigate to the 'File' menu and select 'Open URI' or similar option.
+3. Enter the public wallet address that you wish to watch.
+4. Confirm the addition, and the software will add the address onto your wallet interface.
 
 Now, the aipg-qt interface will show the balance of the watched wallet, but remember, without the corresponding private key, you cannot send transactions from this wallet.
 
 Always remember that if you are importing the wallet as a watch wallet, you are not "loading" the full wallet, just monitoring it, since the private keys are not inputted into the software.
 
-# AI Power Grid Paper Wallet Generator
-JavaScript Client-Side AIPG Wallet Generator
-
-Instructions:
-
-Download and run aipg-paper-wallet.html
-
-Print wallet and keep private key secure!
-
-Now AIPG addresses and their corresponding private key can be conveniently 
-generated in a web browser.
-
-The AI Power GRID - AIPG project (aipowergrid.io) provides an all-in-one HTML document with embedded
-JavaScript/Css/Images. The JavaScript is readable not minified and contains no
-XMLHttpRequest's (no AJAX). The benefit of this technique is you can load the 
-JavaScript locally and trust that the JavaScript did not change after being 
-loaded. 
-
-
-Please send DONATIONS for this project to Bitcoin Address (original developer): 
-1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN
-
-**Procedure for Importing a Paper Wallet into the QT Wallet:**
+# Procedure for Importing a Paper Wallet **private key** into the QT Wallet:
 
 1) Perform a clean installation on a system without any previous wallet (ensure the absence of the .aipg directory). Prior to deletion, safeguard your seed words.
 
@@ -90,6 +66,30 @@ END USER NOTES:
     they might record the private key you generated.
 
  5) BIP38 most likely will not work on mobile devices due to hardware limitations.
+
+# AI Power Grid Paper Wallet Generator
+JavaScript Client-Side AIPG Wallet Generator
+
+Instructions:
+
+Download and run aipg-paper-wallet.html
+
+Print wallet and keep private key secure!
+
+Now AIPG addresses and their corresponding private key can be conveniently 
+generated in a web browser.
+
+The AI Power GRID - AIPG project (aipowergrid.io) provides an all-in-one HTML document with embedded
+JavaScript/Css/Images. The JavaScript is readable not minified and contains no
+XMLHttpRequest's (no AJAX). The benefit of this technique is you can load the 
+JavaScript locally and trust that the JavaScript did not change after being 
+loaded. 
+
+
+Please send DONATIONS for this project to Bitcoin Address (original developer): 
+1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN
+
+
 
 
 Notice of Copyrights and Licenses:
