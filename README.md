@@ -11,11 +11,11 @@ Link: https://github.com/AIPowerGrid/aipg-paper-wallet
 
 3. Run the `aipg-paper-wallet.html` file locally on your computer.
 
-4. Follow the on-screen instructions to generate your new paper wallet.
+4. Follow the on-screen instructions and move your cursor randomly or type jibberish into the box to generate your new paper wallet.
 
 5. Once your wallet has been created, print it out immediately.
 
-6. Verify that the printed document contains your public and private keys in QR code format.
+6. Verify that the printed document contains your public and private keys in raw and QR code format.
 
 7. Store the printed paper wallet in a safe and secure location, like a safe or a safety deposit box. Treat it as you would cash or other valuables.
 
@@ -25,6 +25,23 @@ For additional security, it is recommended to laminate your paper wallet to prot
 
 Your AIPG paper wallet is now ready to receive funds! To send or check your balance, you will use the public key (visible on the paper wallet). Always keep your private key confidential, as anyone with access to it can control your AIPG funds.
 
+The "load and verify" wallet address refers to the public address of your AIPG wallet. This is the address you share with others to receive AIPG coins. It's akin to an email address that you'd give out to receive messages. However, anyone can also use this address to check the balance of the wallet on the blockchain because it's part of the public ledger.
+
+The private key, on the other hand, is like a password. It is a secret key that is used to access and send your coins from the wallet address. Anyone with access to your private key can control the AIPG funds associated with your public address. Therefore, it should be kept secure and never shared with anyone.
+
+**Adding a Watch Wallet to aipg-qt:**
+To add a wallet address as a watch-only wallet in the aipg-qt wallet software, you essentially add it to your wallet interface to keep an eye on its balance and transactions without having the ability to spend any of the coins (since you don't have the private key).
+
+Here's how you can add a watch wallet to aipg-qt:
+
+Open your aipg-qt wallet software.
+Navigate to the 'File' menu and select 'Open URI' or similar option.
+Enter the public wallet address that you wish to watch.
+Confirm the addition, and the software will add the address onto your wallet interface.
+
+Now, the aipg-qt interface will show the balance of the watched wallet, but remember, without the corresponding private key, you cannot send transactions from this wallet.
+
+Always remember that if you are importing the wallet as a watch wallet, you are not "loading" the full wallet, just monitoring it, since the private keys are not inputted into the software.
 
 # AI Power Grid Paper Wallet Generator
 JavaScript Client-Side AIPG Wallet Generator
