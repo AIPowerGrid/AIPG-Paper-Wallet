@@ -29,8 +29,8 @@ The "load and verify" wallet address refers to the public address of your AIPG w
 
 The private key, on the other hand, is like a password. It is a secret key that is used to access and send your coins from the wallet address. Anyone with access to your private key can control the AIPG funds associated with your public address. Therefore, it should be kept secure and never shared with anyone.
 
-# Adding a Watch Wallet to aipg-qt:
-To add a wallet address as a watch-only wallet in the aipg-qt wallet software, you essentially add it to your wallet interface to keep an eye on its balance and transactions without having the ability to spend any of the coins (since you don't have the private key).
+# Adding your public address as a "Watch Wallet" to aipg-qt:
+To add a wallet address as a watch-only wallet in the aipg-qt wallet software, you essentially add it to your wallet interface to keep an eye on its balance and transactions without having the ability to spend any of the coins (since you arent exposing the private key).
 
 1. Open your aipg-qt wallet software.
 2. Navigate to the 'File' menu and select 'Open URI' or similar option.
