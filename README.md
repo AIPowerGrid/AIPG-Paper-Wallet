@@ -1,6 +1,12 @@
 # AI Power Grid Paper Wallet Generator
 JavaScript Client-Side AIPG Wallet Generator
 
+Instructions:
+
+Download and run aipg-paper-wallet.html
+
+Print wallet and keep private key secure!
+
 Now AIPG addresses and their corresponding private key can be conveniently 
 generated in a web browser.
 
