@@ -1,3 +1,31 @@
+🔐 AIPG Paper Wallet Instructions 🔐
+
+A paper wallet is a physical document containing your private and public keys, typically printed in the form of QR codes. It is considered one of the most secure ways to hold AIPG because it keeps your keys completely offline and safe from online hacking attempts. 
+
+Follow these steps to create your AIPG paper wallet:
+
+1. Download the `aipg-paper-wallet.html` file from the official AIPG repository.
+Link: https://github.com/AIPowerGrid/aipg-paper-wallet
+
+2. For extra security, ensure you are offline before generating your wallet. Disconnect your computer from the internet to protect against any online threats.
+
+3. Run the `aipg-paper-wallet.html` file locally on your computer.
+
+4. Follow the on-screen instructions to generate your new paper wallet.
+
+5. Once your wallet has been created, print it out immediately.
+
+6. Verify that the printed document contains your public and private keys in QR code format.
+
+7. Store the printed paper wallet in a safe and secure location, like a safe or a safety deposit box. Treat it as you would cash or other valuables.
+
+⚠️ Remember, if you lose your paper wallet or if it gets damaged to the point that the keys are not legible, you will lose access to your AIPG. There is no way to recover your funds without your keys, so keep them secure and consider making backups.
+
+For additional security, it is recommended to laminate your paper wallet to protect against physical damage and use a secure container for storage.
+
+Your AIPG paper wallet is now ready to receive funds! To send or check your balance, you will use the public key (visible on the paper wallet). Always keep your private key confidential, as anyone with access to it can control your AIPG funds.
+
+
 # AI Power Grid Paper Wallet Generator
 JavaScript Client-Side AIPG Wallet Generator
 
