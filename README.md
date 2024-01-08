@@ -4,8 +4,7 @@ A paper wallet is a physical document containing your private and public keys. I
 
 Follow these steps to create your AIPG paper wallet:
 
-1. Download the `aipg-paper-wallet.html` file from the official AIPG repository.
-Link: https://github.com/AIPowerGrid/aipg-paper-wallet
+1. Download the `aipg-paper-wallet.html` file
 
 2. For extra security, ensure you are offline before generating your wallet. Disconnect your computer from the internet to protect against any online threats.
 
